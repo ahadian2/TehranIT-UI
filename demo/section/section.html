@@ -1,0 +1,139 @@
+﻿<!doctype html>
+<html lang="fa" dir="rtl" class="theme-fade" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TehranIT – Demo</title>
+    <!--Dark Mode-->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            if (!saved) saved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-bs-theme', saved);
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/css/bootstrap-custom.rtl.min.css">
+    <link href="../../assets/fonts/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="../../assets/css/MyCss.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- learn -->
+    <section class="sec sec-bg-light sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="custom-title custom-title--eleven custom-title-size-h3">
+                        آموزش استفاده از کامپوننت Section
+                        <span>
+                            <i class="bi bi-chevron-double-down"></i>
+                        </span>
+                    </h2>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4">فعال کردن کامپوننت </h3>
+                    <p>
+                        <span>برای فعال باید کردن کامپوننت Section به فایل </span>
+                        <code>app.scss </code>
+                        <span>در آدرس </span>
+                        <code>assets/scss/app.scss </code>
+                        <span>بروید و در محل مشخص شده یعنی "ایمپورت کامپوتت ها"، آن را ایمپورت کنید.</span>
+                    </p>
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">@use "components/Section/sec";</script>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">تغییر بکگراند سکشن های ساده</h3>
+                    <p>
+                        <span>سکشن های ساده ما در دو رنگ light و dark هستند. که میتوانید بر اساس نیاز آن ها را استفاده کنید. </span>
+                        <span>و شامل کلاس های </span>
+                        <code>sec-bg-light , sec-bg-dark </code>
+                        <span>میباشد. وبرای تعییر رنگ های سکشن ها به فایل های </span>
+                        <code>variables.scss , themes.scss </code>
+                        <span>مراجعه کنید. نمونه کد های سکشن ساده.</span>
+                    </p>
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr"><!--sec sec-bg-light-->
+<section class="sec sec-bg-light">
+    code
+</section>
+<!--sec sec-bg-dark-->
+<section class="sec sec-bg-dark">
+    code
+</section></script>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">پدینگ بالا و پایین به سکشن ها</h3>
+                    <ul>
+                        <li>
+                            <span>در این کامپوننت میتوانید تا <code>20 rem</code> از بالا و پایین پدینگ بدهید </span>
+                        </li>
+                        <li>
+                            <span> میتوانید برای پدینگ بالا از کلاس <code>sec-pt-0 ... sec-pt-20 </code> استفاده کنید.</span>
+                        </li>
+                        <li>
+                            <span> میتوانید برای پدینگ پایین از کلاس <code>sec-pb-0 ... sec-pb-20 </code> استفاده کنید.</span>
+                        </li>
+                        <li>
+                            <span> میتوانید برای پدینگ بالا و پایین همزمان از کلاس <code>sec-py-0 ... sec-py-20 </code> استفاده کنید.</span>
+                        </li>
+                    </ul>
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<section class="sec sec-bg-light sec-pb-5 sec-pt-5">
+    code
+</section>
+
+<section class="sec sec-bg-light sec-py-5">
+    code
+</section></script>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">ارتفاع ثابت برای سکشن‌ها</h3>
+                    <p>
+                        <span>این کامپوننت دارای 3 ارتفاع ثابت میباشد. میتوانید از کلاس های </span>
+                        <code>sec-min-100vh sec-min-75vh sec-min-50vh </code>
+                        <span>استفاده کنید.از این کلاس ها میتوانید با کلاس</span>
+                        <code>sec-bg-img </code>
+                        <span>همزمان استفاده کنید. و سکشن شما میتواند دارای بکگراند باشد.</span>
+                        <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!--100vh-->
+<section class="sec sec-bg-light sec-min-100vh">
+    code
+</section>
+
+<!--75vh-->
+<section class="sec sec-bg-light sec-min-75vh">
+    code
+</section>
+
+<!--50vh-->
+<section class="sec sec-bg-light sec-min-50vh">
+    code
+</section>
+                        </script>
+                    </p>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">بکگراند - تصاویر برای سکشن ها</h3>
+                    <p>
+                        <span>میتوانید بکگراند هایی با پس زمینه تصویر ایجاد کنید. برای این کار از کلاس </span>
+                        <code>sec-bg-img</code>
+                        <span>استفاده کنید. . همچنین باید تصویر را با تگ استایل به سکشن خود اضافه کنید.</span>
+                    </p>
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<section class="sec sec-min-50vh sec-bg-img" style="background-image: url('assets/img/header/s4.jpg')">
+    code
+</section></script>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">لایه شفاف تیره روی بکگراند تصاویر</h3>
+                    <p>
+                        <span>
+                            میتوانید یک لایه شفاف تیره روی بکگراند تصاویر داشته باشید تا فونت ها و عناصر دیگر واضح تر نمایش داده شوند. این کار را میتوانید با کلاس
+                        </span>
+                        <code>sec-scrim-20 ... sec-scrim-90</code>
+                        <span>انجام دهید و دارای 8 درجه شفافیت میباشد.</span>
+                    </p>
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<section class="sec sec-min-50vh sec-bg-img sec-scrim-20" style="background-image: url('assets/img/header/s4.jpg')">
+    code
+</section>
+
+<section class="sec sec-min-50vh sec-bg-img sec-scrim-90" style="background-image: url('assets/img/header/s4.jpg')">
+    code
+</section></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/library/Jquery-3.7.1/jquery-3.7.1.min.js"></script>
+    <script src="../../assets/library/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/MyJs.js"></script>
+</body>
+</html>

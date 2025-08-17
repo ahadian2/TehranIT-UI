@@ -1,0 +1,234 @@
+﻿<!doctype html>
+<html lang="fa" dir="rtl" data-bs-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>دموی افکت‌های پس‌زمینه</title>
+
+    <!-- CSS پروژه (خروجی Sass شما) -->
+    <link href="assets/css/bootstrap-custom.rtl.min.css" rel="stylesheet" />
+
+    <style>
+        /* صرفاً برای دمو */
+        .demo-tile {
+            min-height: 320px;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: end;
+            justify-content: start;
+            padding: 1rem;
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(0,0,0,.1);
+        }
+
+            .demo-tile .label {
+                background: rgba(0,0,0,.35);
+                backdrop-filter: blur(6px);
+                border-radius: .75rem;
+                padding: .5rem .75rem;
+                font-size: .9rem;
+                line-height: 1;
+                direction: ltr; /* نمایش دقیق نام کلاس‌ها */
+            }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1rem;
+        }
+
+        @media (max-width: 1200px) {
+            .demo-grid {
+                grid-template-columns: repeat(8, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .demo-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .demo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .col-6 {
+            grid-column: span 6;
+        }
+
+        .col-4 {
+            grid-column: span 4;
+        }
+
+        .col-12 {
+            grid-column: span 12;
+        }
+    </style>
+</head>
+<body class="bg-body">
+    <main class="container py-5">
+        <h1 class="mb-4 h3">دموی افکت‌های پس‌زمینه (bg-effects)</h1>
+
+        <!-- گروه 1: گرادیان‌ها -->
+        <section class="mb-5">
+            <h2 class="h5 mb-3">گرادیان‌ها</h2>
+            <div class="demo-grid">
+                <!-- bg-gradient -->
+                <div class="col-6">
+                    <div class="demo-tile bg-gradient">
+                        <span class="label">.bg-gradient</span>
+                    </div>
+                </div>
+
+                <!-- bg-gradient-anim -->
+                <div class="col-6">
+                    <div class="demo-tile bg-gradient-anim">
+                        <span class="label">.bg-gradient-anim</span>
+                    </div>
+                </div>
+
+                <!-- پریست‌ها (ثابت) -->
+                <div class="col-4">
+                    <div class="demo-tile bg-gradient--sunset">
+                        <span class="label">.bg-gradient--sunset</span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="demo-tile bg-gradient--ocean">
+                        <span class="label">.bg-gradient--ocean</span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="demo-tile bg-gradient--forest">
+                        <span class="label">.bg-gradient--forest</span>
+                    </div>
+                </div>
+
+                <!-- پریست‌ها (متحرک) -->
+                <div class="col-4">
+                    <div class="demo-tile bg-gradient-anim--sunset">
+                        <span class="label">.bg-gradient-anim--sunset</span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="demo-tile bg-gradient-anim--ocean">
+                        <span class="label">.bg-gradient-anim--ocean</span>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="demo-tile bg-gradient-anim--forest">
+                        <span class="label">.bg-gradient-anim--forest</span>
+                    </div>
+                </div>
+
+                <!-- سفارشی‌سازی با متغیرها -->
+                <div class="col-6">
+                    <div class="demo-tile bg-gradient-anim"
+                         style="--bg1:#0ea5e9; --bg2:#22d3ee; --bg3:#34d399; --bg4:#fbbf24; --bg-angle:30deg; --bg-speed:10s;">
+                        <span class="label">.bg-gradient-anim + vars</span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="demo-tile bg-gradient"
+                         style="--bg1:#9333ea; --bg2:#f43f5e; --bg3:#f97316; --bg4:#22c55e;">
+                        <span class="label">.bg-gradient + vars</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- گروه 2: پترن‌ها -->
+        <section class="mb-5">
+            <h2 class="h5 mb-3">پترن‌ها (Stripes / Dots / Grid / Noise)</h2>
+            <div class="demo-grid">
+                <!-- bg-stripes -->
+                <div class="col-6">
+                    <div class="demo-tile bg-stripes"
+                         style="background-color:#4f46e5; --stripe-color:rgba(255,255,255,.15); --stripe-size:14px;">
+                        <span class="label">.bg-stripes</span>
+                    </div>
+                </div>
+
+                <!-- bg-dots -->
+                <div class="col-6">
+                    <div class="demo-tile bg-dots"
+                         style="background-color:#0ea5e9; --dot-color:rgba(255,255,255,.25); --dot-size:3px; --dot-gap:16px;">
+                        <span class="label">.bg-dots</span>
+                    </div>
+                </div>
+
+                <!-- bg-grid -->
+                <div class="col-6">
+                    <div class="demo-tile bg-grid"
+                         style="background-color:#111827; --grid-color:rgba(255,255,255,.08); --grid-gap:24px;">
+                        <span class="label">.bg-grid</span>
+                    </div>
+                </div>
+
+                <!-- bg-noise -->
+                <div class="col-6">
+                    <div class="demo-tile bg-noise" style="background-color:#1f2937; --noise-opacity:.07;">
+                        <span class="label">.bg-noise</span>
+                    </div>
+                </div>
+
+                <!-- ترکیب پترن + گرادیان -->
+                <div class="col-12">
+                    <div class="demo-tile bg-gradient-anim bg-noise">
+                        <span class="label">.bg-gradient-anim.bg-noise</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- گروه 3: ابزارهای کمکی -->
+        <section class="mb-5">
+            <h2 class="h5 mb-3">کلاس‌های کمکی (Utilities)</h2>
+            <div class="demo-grid">
+                <!-- bg-cover -->
+                <div class="col-4">
+                    <div class="demo-tile bg-gradient-anim bg-cover" style="height:240px;">
+                        <span class="label">.bg-cover</span>
+                    </div>
+                </div>
+
+                <!-- bg-contain -->
+                <div class="col-4">
+                    <div class="demo-tile bg-gradient-anim bg-contain" style="height:240px;">
+                        <span class="label">.bg-contain</span>
+                    </div>
+                </div>
+
+                <!-- bg-fixed -->
+                <div class="col-4" style="height:240px;">
+                    <div class="demo-tile bg-gradient-anim bg-fixed" style="height:100%;">
+                        <span class="label">.bg-fixed</span>
+                    </div>
+                </div>
+            </div>
+            <p class="text-muted small mt-2">نکته: برای مشاهدهٔ اثر <code>.bg-fixed</code> بهتر است صفحه را کمی اسکرول کنید.</p>
+        </section>
+
+        <!-- گروه 4: نمونهٔ استفاده روی سکشن واقعی -->
+        <section class="mb-5">
+            <h2 class="h5 mb-3">نمونهٔ استفاده در سکشن (sec-a + spacing)</h2>
+            <div class="demo-grid">
+                <div class="col-12">
+                    <section class="sec-a sec-py-6 bg-gradient-anim bg-noise text-white rounded-4">
+                        <div class="container py-3">
+                            <h3 class="h4 mb-1">سکشن با گرادیان متحرک + نویز</h3>
+                            <p class="mb-0 opacity-75">از کلاس‌های spacing سفارشی <code>sec-py-6</code> استفاده شده است.</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

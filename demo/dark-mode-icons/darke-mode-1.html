@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="fa" dir="rtl" class="theme-fade" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TehranIT – Demo</title>
+    <!--Dark Mode-->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            if (!saved) saved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-bs-theme', saved);
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/css/bootstrap-custom.rtl.min.css">
+    <link href="../../assets/fonts/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="../../assets/css/MyCss.css" rel="stylesheet" />
+</head>
+<body>
+   
+
+
+
+
+
+    <section class="sec sec-bg-dark sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-center">
+
+                    <label class="dark-mode-icon dark-mode-icon--lg" aria-label="Toggle dark mode">
+                        <input class="toggle-checkbox dark-mode-icon-toggle" type="checkbox">
+                        <div class="toggle-slot">
+                            <div class="sun-icon-wrapper">
+                                <i class="bi bi-sun-fill sun-icon"></i>
+                            </div>
+                            <div class="toggle-button"></div>
+                            <div class="moon-icon-wrapper">
+                                <i class="bi bi-moon-fill moon-icon"></i>
+                            </div>
+                        </div>
+                    </label>
+
+
+                </div>
+                <div class="col-4 text-center">
+
+                    <label class="dark-mode-icon dark-mode-icon--md" aria-label="Toggle dark mode">
+                        <input class="toggle-checkbox dark-mode-icon-toggle" type="checkbox">
+                        <div class="toggle-slot">
+                            <div class="sun-icon-wrapper">
+                                <i class="bi bi-sun-fill sun-icon"></i>
+                            </div>
+                            <div class="toggle-button"></div>
+                            <div class="moon-icon-wrapper">
+                                <i class="bi bi-moon-fill moon-icon"></i>
+                            </div>
+                        </div>
+                    </label>
+
+
+                </div>
+
+                <div class="col-4 text-center">
+
+                    <label class="dark-mode-icon dark-mode-icon--sm" aria-label="Toggle dark mode">
+                        <input class="toggle-checkbox dark-mode-icon-toggle" type="checkbox">
+                        <div class="toggle-slot">
+                            <div class="sun-icon-wrapper">
+                                <i class="bi bi-sun-fill sun-icon"></i>
+                            </div>
+                            <div class="toggle-button"></div>
+                            <div class="moon-icon-wrapper">
+                                <i class="bi bi-moon-fill moon-icon"></i>
+                            </div>
+                        </div>
+                    </label>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="../../assets/library/Jquery-3.7.1/jquery-3.7.1.min.js"></script>
+    <script src="../../assets/library/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/MyJs.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "sass": "sass --load-path=node_modules assets/scss/app.scss assets/css/bootstrap-custom.min.css --style=compressed --source-map",
+    "sass:watch": "sass --watch --load-path=node_modules assets/scss/app.scss assets/css/bootstrap-custom.min.css --style=compressed",
+    "rtl": "rtlcss assets/css/bootstrap-custom.min.css assets/css/bootstrap-custom.rtl.min.css",
+    "build": "npm run sass && npm run rtl"
+  },
+  "name": "tehranit-ui",
+  "version": "1.0.0",
+  "description": "<div dir=\"rtl\">\r <h1>راهنمای سریع کار با پروژه TehranIT Web</h1>\r <h2>نصب پکیج‌ها</h2>\r <p>اگر از همین ریپو استفاده می‌کنید و <code>node_modules</code> را دارید، این مرحله لازم نیست. و در غیر اینصورت ترمینال را باز کنید و بزنید:</p>\r <img src=\"assets/img/git/1.png\" alt=\"‌node_modules\" width=\"100%\">\r </div>\r <pre><code>npm install bootstrap sass</code></pre>",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

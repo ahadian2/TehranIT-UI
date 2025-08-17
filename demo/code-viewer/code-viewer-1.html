@@ -1,0 +1,266 @@
+﻿<!doctype html>
+<html lang="fa" dir="rtl" class="theme-fade" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TehranIT – Demo</title>
+    <!--Dark Mode-->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            if (!saved) saved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-bs-theme', saved);
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/css/bootstrap-custom.rtl.min.css">
+    <link href="../../assets/fonts/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="../../assets/css/MyCss.css" rel="stylesheet" />
+</head>
+<body>
+    <!--item-->
+    <section class="sec sec-bg-light sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="txt-base text-center">آموزش استفاده از Code Viewer</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--item-->
+    <section class="sec sec-bg-dark sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="txt-base">اضافه کردن فایل‌ها اجباری</h2>
+                    <h4 class="txt-base">1 - استفاده از Sass</h4>
+                    <p class="txt-muted">اگر از Sass استفاده می‌کنید، فایل code-viewer.scss را به پروژه‌ی اصلی‌تان ایمپورت کنید تا رنگ‌ها و استایل‌ها را سفارشی کنید. این فایل در مسیر زیر میباشد.</p>
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">assets/scss/components/CodeViewer/_code-viewer.scss</script>
+                    <p class="txt-muted">برای ایمپورت باید به فایل app.scss در آدرس assets/scss/app.scss بروید و در محل مشخص شده یعنی "ایمپورت کامپوتت ها"، این کار را انجام دهید.</p>
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">@use "components/CodeViewer/_code-viewer";</script>
+                    <h4 class="txt-base">2 - افزودن فایل js</h4>
+                    <p class="txt-muted">این کامپوننت نیاز به فایل Js خود دارد. میتوانید محتویات آن را به فایل Jquery خود اضافه کنید و یا به صورت مستقل به پروژه خود اضافه کنید. مسیر این فایل در زیر آمده است.</p>
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">assets/js/code-viewer.js</script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--item-->
+    <section class="sec sec-bg-light sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="txt-base">نحوه استفاده از Code Viewer</h2>
+                    <p class="txt-muted">برای استفاده از Code Viewer با توجه به نوع زبان برنامه نویسی میتوانید یکی از مدل های زیر را انتخاب کنید و در کد های خود استفاده کنید. Code Viewer در حال حاضر از زبان های html, css, js, jquery, csharp پشتیبانی میکند.</p>
+                    <p class="text-danger">توجه : باید مقدار scrip در کد به script تغییر کند. </p>
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!-- HTML -->
+<scrip type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<div class="box" data-role="sample">Hello</div>
+</scrip>
+
+<!-- CSS -->
+<scrip type="text/plain" class="cb" data-lang="CSS" dir="ltr">
+.box { color:#0ea5e9; border:1px solid #1f2937; }
+</scrip>
+
+<!-- JS -->
+<scrip type="text/plain" class="cb" data-lang="JS" dir="ltr">
+document.querySelector('.box')?.classList.toggle('active');
+</scrip>
+
+<!-- jQuery -->
+<scrip type="text/plain" class="cb" data-lang="jQuery" dir="ltr">
+$('.box').css('opacity', 0.9).text('clicked');
+</scrip>
+
+<!-- C# -->
+<scrip type="text/plain" class="cb" data-lang="CSharp" dir="ltr">
+public IActionResult Index(){ return View(); }
+</scrip>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--item-->
+    <section class="sec sec-bg-dark sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="txt-base">تغییر رنگ‌ها</h2>
+                    <h4 class="txt-base">1 - روش Sass (توصیه‌شده)</h4>
+                    <p class="txt-muted">داخل _code-viewer.scss متغیرهای رنگی را تغییر دهید. سپس فایل Sass را کامپایل کنید.</p>
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">
+// پایه
+:root {
+  --cb-bg: #0f172a;     // پس‌زمینه بلوک
+  --cb-fg: #e5e7eb;     // متن
+  --cb-head: #ea580c;   // سربرگ
+  --cb-head-fg: #fff;
+  --cb-border: #1f2937;
+  --cb-accent: #f97316;
+
+  // رنگ توکن‌ها
+  --cb-tag:  #7dd3fc;
+  --cb-attr: #f472b6;
+  --cb-str:  #bef264;
+  --cb-comm: #94a3b8;
+  --cb-num:  #fca5a5;
+  --cb-kw:   #c4b5fd;
+  --cb-type: #60a5fa;
+  --cb-prop: #66d9ef;
+  --cb-val:  #fcd34d;
+
+  // اختیاری
+  --cb-fn: #a6e22e;
+  --cb-jq: #ffcc66;
+}
+
+// تم تیره/روشن (اگر تم‌بندی Bootstrap داری)
+[data-bs-theme="light"]{
+  --cb-bg:#0f172a; --cb-fg:#e5e7eb;
+}
+[data-bs-theme="dark"]{
+  --cb-bg:#0b1020; --cb-fg:#e2e8f0;
+}
+                    </script>
+                        <h4 class="txt-base">2 - روش CSS Override (سریع)</h4>
+                        <p class="txt-muted">در یک فایل CSS جدا یا داخل تگ style از کد های زیر استفاده کنید. این روش سریع است ولی تغییرات روی Sass دائمی‌تر و تمیزتر است.</p>
+                        <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">
+:root {
+--cb-bg: #ffffff;
+--cb-head: #2563eb;
+--cb-accent: #3b82f6;
+--cb-tag: #7dd3fc;
+--cb-attr: #facc15;
+--cb-str: #22c55e;
+--cb-comm: #9ca3af;
+--cb-num: #f97316;
+--cb-kw: #ec4899;
+--cb-type: #8b5cf6;
+--cb-prop: #fbbf24;
+--cb-val: #34d399;
+--cb-jq: #0ea5e9;
+}
+
+[data-bs-theme="dark"] {
+  --cb-bg: #0a0f1e;
+  --cb-head: #1d4ed8;
+}
+                        </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--item-->
+    <section class="sec sec-bg-light sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="txt-base">دمو Code Viewer</h2>
+                    <p class="txt-muted">در این بخش میتوانید انواع مدل های Code Viewer را مشاهده کنید.</p>
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!-- Toggle dark mode control -->
+<label class="dark-mode-icon dark-mode-icon--lg"
+       aria-label="Toggle dark mode">
+  <input class="toggle-checkbox dark-mode-icon-toggle"
+         type="checkbox" disabled>
+  <div class="toggle-slot">
+    <div class="sun-icon-wrapper">
+      <i class="bi bi-sun-fill sun-icon"></i>
+    </div>
+    <div class="toggle-button"></div>
+    <div class="moon-icon-wrapper">
+      <i class="bi bi-moon-fill moon-icon"></i>
+    </div>
+  </div>
+</label>
+
+<!-- تگ چندخطی با کوتیشن تکی -->
+<div
+  class='wrapper fluid container'
+  data-role='sample'
+></div>
+                    </script>
+                </div>
+                <div class="col-12 col-md-6">
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">
+/* Theme palette */
+:root {
+  --cb-tag: #7dd3fc;
+  --brand: "My Brand"; /* string */
+}
+
+.dark-mode-icon { color: #113F67; }
+.cb-code::-webkit-scrollbar-thumb { border-radius: 4px; }
+
+.container { width: 90vw; max-width: 1280px; }
+.btn { padding: 0.5rem 1rem; opacity: 0.85; }
+                    </script>
+
+                </div>
+                <div class="col-12 col-md-6">
+                    <script type="text/plain" class="cb" data-lang="JS" dir="ltr">
+// Dark toggle
+const btn = document.querySelector('#toggle');
+btn?.addEventListener('click', () => {
+  const on = document.documentElement.getAttribute('data-bs-theme') === 'dark';
+  document.documentElement.setAttribute('data-bs-theme', on ? 'light' : 'dark');
+  console.log(`theme -> ${on ? 'light' : 'dark'}`);
+});
+
+// function & numbers
+function add(a, b) { return a + b; }
+const total = add(12, 3.5);
+                    </script>
+                </div>
+                <div class="col-12 col-md-6">
+                    <script type="text/plain" class="cb" data-lang="jQuery" dir="ltr">
+$(function () {
+  const $btn = $('#toggle');
+  $btn.on('click', function () {
+    $('body')
+      .toggleClass('active')
+      .css('opacity', 0.9)
+      .find('.item').eq(0).text('clicked');
+  });
+});
+                        $(function () {
+  const $btn = $('#toggle');
+  $btn.on('click', function () {
+    $('body')
+      .toggleClass('active')
+      .css('opacity', 0.9)
+      .find('.item').eq(0).text('clicked');
+  });
+});
+                    </script>
+                </div>
+                <div class="col-12 col-md-6">
+                    <script type="text/plain" class="cb" data-lang="CSharp" dir="ltr">
+// ASP.NET Controller sample
+using Microsoft.AspNetCore.Mvc;
+
+public class HomeController : Controller
+{
+    // GET /
+    public IActionResult Index()
+    {
+        string s = @"Multi
+line";
+        int n = 42;
+        return View();
+    }
+}
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../../assets/library/Jquery-3.7.1/jquery-3.7.1.min.js"></script>
+    <script src="../../assets/library/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/MyJs.js"></script>
+</body>
+</html>

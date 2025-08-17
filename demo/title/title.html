@@ -1,0 +1,685 @@
+﻿<!doctype html>
+<html lang="fa" dir="rtl" class="theme-fade" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TehranIT – Demo</title>
+    <!--Dark Mode-->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            if (!saved) saved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-bs-theme', saved);
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/css/bootstrap-custom.rtl.min.css">
+    <link href="../../assets/fonts/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="../../assets/css/MyCss.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- learn -->
+    <section class="sec sec-bg-light sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="custom-title custom-title--eleven custom-title-size-h3">
+                        آموزش استفاده از کامپوننت Title
+                        <span>
+                            <i class="bi bi-chevron-double-down"></i>
+                        </span>
+                    </h2>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4">فعال کردن کامپوننت </h3>
+                    <p>
+                        <span>برای فعال باید کردن کامپوننت Title به فایل </span>
+                        <code>app.scss </code>
+                        <span>در آدرس </span>
+                        <code>assets/scss/app.scss </code>
+                        <span>بروید و در محل مشخص شده یعنی "ایمپورت کامپوتت ها"، آن را ایمپورت کنید.</span>
+                    </p>
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">@use "components/Title/_title";</script>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">تغییر رنگ‌ها و فونت‌ها</h3>
+                    <p>
+                        <span>رنگ‌ها از کامپوننت </span>
+                        <code>_text-color.scss </code>
+                        <span>دریافت میشود یعنی همان رنگ های پیشفرض که در طراحی سایت از آن استغاده میکنیم مثل </span>
+                        <code>--bs-primary, --bs-txt-base, --bs-txt-faint</code>
+                        <span>ولی میتوان رنگ ها را از طریق کامپوننت تایتل نیز تغییر داد. که در مسیر </span>
+                        <code>assets/components/Title/_title.scss </code>
+                        <span>میباشد. </span>
+                    </p>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">انتخاب سایز تایتل</h3>
+                    <p>
+                        <span>برای ایجاد یک عنوان سفارشی، و انتخاب یک سایز برای آن کامپوننت تایتل 4 سایز را در نظر گرفته که بنا به نیار خود میتوانید روی عناصری مثل </span>
+                        <code>h1, h2, div</code>
+                        <span>استفاده کنید.</span>
+                    </p>
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">
+//برای بزرگترین تیتر
+custom-title-size-h1
+
+//برای تیتر کمی کوچکتر
+custom-title-size-h2
+
+//سایز متوسط
+custom-title-size-h3
+
+//سایز کوچک
+custom-title-size-h4
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- dark mode -->
+    <section class="sec sec-bg-dark sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="custom-title custom-title--eleven custom-title-size-h3 mb-5">
+                        کد ها را در حالت دارک یا لایت ببینید
+                        <span>
+                            <i class="bi bi-chevron-double-down"></i>
+                        </span>
+                    </h2>
+                    <label class="dark-mode-icon dark-mode-icon--lg" aria-label="Toggle dark mode">
+                        <input class="toggle-checkbox dark-mode-icon-toggle" type="checkbox">
+                        <div class="toggle-slot">
+                            <div class="sun-icon-wrapper">
+                                <i class="bi bi-sun-fill sun-icon"></i>
+                            </div>
+                            <div class="toggle-button"></div>
+                            <div class="moon-icon-wrapper">
+                                <i class="bi bi-moon-fill moon-icon"></i>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- demo -->
+    <!--style-1-->
+    <section class="sec sec-bg-light sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--one custom-title-size-h3">
+                        عنوان فارسی - استایل ۱
+                    </h3>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می‌باشد. کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده
+                        شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را
+                        برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                        ایجاد کرد.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!--h1-->
+<h1 class="custom-title custom-title--one custom-title-size-h1">
+    عنوان فارسی - استایل ۱
+</h1>
+
+<!--h2-->
+<h2 class="custom-title custom-title--one custom-title-size-h2">
+    عنوان فارسی - استایل ۱
+</h2>
+
+<!--h3-->
+<h3 class="custom-title custom-title--one custom-title-size-h3">
+    عنوان فارسی - استایل ۱
+</h3>
+
+<!--h4-->
+<h4 class="custom-title custom-title--one custom-title-size-h4">
+    عنوان فارسی - استایل ۱
+</h4>
+
+<!--LTR-->
+<h3 dir="ltr" class="custom-title custom-title--one custom-title-size-h3">
+    English Title - Style One
+</h3>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--style-2-1-->
+    <section class="sec sec-bg-dark sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--two custom-title-size-h3">
+                        عنوان فارسی - استایل 2
+                        <span>متن تگلاین عنوان فارسی - استایل 2 </span>
+                    </h3>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می‌باشد. کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده
+                        شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را
+                        برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                        ایجاد کرد.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!--h1-->
+<h1 class="custom-title custom-title--two custom-title-size-h1">
+    عنوان فارسی - استایل 2
+    <span>متن تگ‌لاین عنوان فارسی - استایل 2 </span>
+</h1>
+
+<!--h2-->
+<h2 class="custom-title custom-title--two custom-title-size-h2">
+    عنوان فارسی - استایل 2
+    <span>متن تگ‌لاین عنوان فارسی - استایل 2 </span>
+</h2>
+
+<!--h3-->
+<h3 class="custom-title custom-title--two custom-title-size-h3">
+    عنوان فارسی - استایل 2
+    <span>متن تگ‌لاین عنوان فارسی - استایل 2 </span>
+</h3>
+
+<!--h4-->
+<h4 class="custom-title custom-title--two custom-title-size-h4">
+    عنوان فارسی - استایل 2
+    <span>متن تگ‌لاین عنوان فارسی - استایل 2 </span>
+</h4>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--style-2-2-->
+    <section class="sec sec-bg-light sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--alt-two custom-title-size-h3">
+                        عنوان فارسی - استایل 2-2
+                        <span>تگلاین وسط عنوان فارسی</span>
+                    </h3>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می‌باشد. کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده
+                        شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را
+                        برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                        ایجاد کرد.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!--h1-->
+<h1 class="custom-title custom-title--alt-two custom-title-size-h1">
+    عنوان فارسی - استایل 2-2
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h1>
+
+<!--h2-->
+<h2 class="custom-title custom-title--alt-two custom-title-size-h2">
+    عنوان فارسی - استایل 2-2
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h2>
+
+<!--h3-->
+<h3 class="custom-title custom-title--alt-two custom-title-size-h3">
+    عنوان فارسی - استایل 2-2
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h3>
+
+<!--h4-->
+<h4 class="custom-title custom-title--alt-two custom-title-size-h4">
+    عنوان فارسی - استایل 2-2
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h4>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--style-3-->
+    <section class="sec sec-bg-dark sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--three custom-title-size-h3"> عنوان فارسی - استایل 3</h3>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می‌باشد. کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده
+                        شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را
+                        برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                        ایجاد کرد.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!--h1-->
+<h1 class="custom-title custom-title--three custom-title-size-h1"> عنوان فارسی - استایل 3</h1>
+
+<!--h2-->
+<h2 class="custom-title custom-title--three custom-title-size-h2"> عنوان فارسی - استایل 3</h2>
+
+<!--h3-->
+<h3 class="custom-title custom-title--three custom-title-size-h3"> عنوان فارسی - استایل 3</h3>
+
+<!--h4-->
+<h4 class="custom-title custom-title--three custom-title-size-h4"> عنوان فارسی - استایل 3</h4>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--style-4-->
+    <section class="sec sec-bg-light sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--four custom-title-size-h3">
+                        <span>
+                            تگلاین وسط عنوان فارسی
+                        </span>
+                        عنوان
+                        <em>فارسی</em>
+                        استایل 4
+                    </h3>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می‌باشد. کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده
+                        شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را
+                        برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                        ایجاد کرد.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!--h1-->
+<h1 class="custom-title custom-title--four custom-title-size-h1">
+    <span>
+        تگ‌لاین وسط عنوان فارسی
+    </span>
+    عنوان
+    <em>فارسی</em>
+    استایل 4
+</h1>
+
+<!--h2-->
+<h2 class="custom-title custom-title--four custom-title-size-h2">
+    <span>
+        تگ‌لاین وسط عنوان فارسی
+    </span>
+    عنوان
+    <em>فارسی</em>
+    استایل 4
+</h2>
+
+<!--h3-->
+<h3 class="custom-title custom-title--four custom-title-size-h3">
+    <span>
+        تگ‌لاین وسط عنوان فارسی
+    </span>
+    عنوان
+    <em>فارسی</em>
+    استایل 4
+</h3>
+
+<!--h4-->
+<h4 class="custom-title custom-title--four custom-title-size-h4">
+    <span>
+        تگ‌لاین وسط عنوان فارسی
+    </span>
+    عنوان
+    <em>فارسی</em>
+    استایل 4
+</h4>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--style-5-->
+    <section class="sec sec-bg-dark sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--five custom-title-size-h3">
+                        عنوان فارسی - استایل 5
+                        <span>تگلاین وسط عنوان فارسی</span>
+                    </h3>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می‌باشد. کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده
+                        شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را
+                        برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                        ایجاد کرد.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!--h1-->
+<h1 class="custom-title custom-title--five custom-title-size-h1">
+    عنوان فارسی - استایل 5
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h1>
+
+<!--h2-->
+<h2 class="custom-title custom-title--five custom-title-size-h2">
+    عنوان فارسی - استایل 5
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h2>
+
+<!--h3-->
+<h3 class="custom-title custom-title--five custom-title-size-h3">
+    عنوان فارسی - استایل 5
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h3>
+
+<!--h4-->
+<h4 class="custom-title custom-title--five custom-title-size-h4">
+    عنوان فارسی - استایل 5
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h4>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--style-6-->
+    <section class="sec sec-bg-light sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--six custom-title-size-h3">
+                        عنوان فارسی - استایل 6
+                        <span>تگلاین وسط عنوان فارسی</span>
+                    </h3>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می‌باشد. کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده
+                        شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را
+                        برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                        ایجاد کرد.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!--h1-->
+<h1 class="custom-title custom-title--six custom-title-size-h1">
+    عنوان فارسی - استایل 6
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h1>
+
+<!--h2-->
+<h2 class="custom-title custom-title--six custom-title-size-h2">
+    عنوان فارسی - استایل 6
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h2>
+
+<!--h3-->
+<h3 class="custom-title custom-title--six custom-title-size-h3">
+    عنوان فارسی - استایل 6
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h3>
+
+<!--h4-->
+<h4 class="custom-title custom-title--six custom-title-size-h4">
+    عنوان فارسی - استایل 6
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h4>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--style-7-->
+    <section class="sec sec-bg-dark sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--seven custom-title-size-h3">
+                        عنوان فارسی - استایل 7
+                    </h3>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می‌باشد. کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده
+                        شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را
+                        برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                        ایجاد کرد.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!--h1-->
+<h1 class="custom-title custom-title--seven custom-title-size-h1">
+    عنوان فارسی - استایل 7
+</h1>
+
+<!--h2-->
+<h2 class="custom-title custom-title--seven custom-title-size-h2">
+    عنوان فارسی - استایل 7
+</h2>
+
+<!--h3-->
+<h3 class="custom-title custom-title--seven custom-title-size-h3">
+    عنوان فارسی - استایل 7
+</h3>
+
+<!--h4-->
+<h4 class="custom-title custom-title--seven custom-title-size-h4">
+    عنوان فارسی - استایل 7
+</h4>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--style-8-->
+    <section class="sec sec-bg-light sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--eight custom-title-size-h3">
+                        عنوان فارسی - استایل 8
+                    </h3>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می‌باشد. کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده
+                        شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را
+                        برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                        ایجاد کرد.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!--h1-->
+<h1 class="custom-title custom-title--eight custom-title-size-h1">
+    عنوان فارسی - استایل 8
+</h1>
+
+<!--h2-->
+<h2 class="custom-title custom-title--eight custom-title-size-h2">
+    عنوان فارسی - استایل 8
+</h2>
+
+<!--h3-->
+<h3 class="custom-title custom-title--eight custom-title-size-h3">
+    عنوان فارسی - استایل 8
+</h3>
+
+<!--h4-->
+<h4 class="custom-title custom-title--eight custom-title-size-h4">
+    عنوان فارسی - استایل 8
+</h4>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--style-9-->
+    <section class="sec sec-bg-dark sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--nine custom-title-size-h3">
+                        عنوان فارسی - استایل 9
+                        <span>تگلاین وسط عنوان فارسی</span>
+                    </h3>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می‌باشد. کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده
+                        شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را
+                        برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                        ایجاد کرد.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!--h1-->
+<h1 class="custom-title custom-title--nine custom-title-size-h1">
+    عنوان فارسی - استایل 9
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h1>
+
+<!--h2-->
+<h2 class="custom-title custom-title--nine custom-title-size-h2">
+    عنوان فارسی - استایل 9
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h2>
+
+<!--h3-->
+<h3 class="custom-title custom-title--nine custom-title-size-h3">
+    عنوان فارسی - استایل 9
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h3>
+
+<!--h4-->
+<h4 class="custom-title custom-title--nine custom-title-size-h4">
+    عنوان فارسی - استایل 9
+    <span>تگ‌لاین وسط عنوان فارسی</span>
+</h4>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--style-10-->
+    <section class="sec sec-bg-light sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--ten custom-title-size-h3">عنوان فارسی - استایل 10</h3>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می‌باشد. کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده
+                        شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را
+                        برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                        ایجاد کرد.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!--h1-->
+<h1 class="custom-title custom-title--ten custom-title-size-h1">عنوان فارسی - استایل 10</h1>
+
+<!--h2-->
+<h2 class="custom-title custom-title--ten custom-title-size-h2">عنوان فارسی - استایل 10</h2>
+
+<!--h3-->
+<h3 class="custom-title custom-title--ten custom-title-size-h3">عنوان فارسی - استایل 10</h3>
+
+<!--h4-->
+<h4 class="custom-title custom-title--ten custom-title-size-h4">عنوان فارسی - استایل 10</h4>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--style-11-->
+    <section class="sec sec-bg-dark sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--eleven custom-title-size-h3">
+                        عنوان فارسی - استایل 11
+                        <span>
+                            <i class="bi bi-chevron-double-down"></i>
+                        </span>
+                    </h3>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+                        طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                        ابزارهای کاربردی می‌باشد. کتاب‌های زیادی در شصت و سه درصد گذشته، حال و آینده
+                        شناخت فراوان جامعه و متخصصان را می‌طلبد تا با نرم‌افزارها شناخت بیشتری را
+                        برای طراحان رایانه‌ای علی‌الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی
+                        ایجاد کرد.
+                    </p>
+                </div>
+                <div class="col-12">
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+<!--h1-->
+<h1 class="custom-title custom-title--eleven custom-title-size-h1">
+    عنوان فارسی - استایل 11
+    <span>
+        <i class="bi bi-chevron-double-down"></i>
+    </span>
+</h1>
+
+<!--h2-->
+<h2 class="custom-title custom-title--eleven custom-title-size-h2">
+    عنوان فارسی - استایل 11
+    <span>
+        <i class="bi bi-chevron-double-down"></i>
+    </span>
+</h2>
+
+<!--h3-->
+<h3 class="custom-title custom-title--eleven custom-title-size-h3">
+    عنوان فارسی - استایل 11
+    <span>
+        <i class="bi bi-chevron-double-down"></i>
+    </span>
+</h3>
+
+<!--h4-->
+<h4 class="custom-title custom-title--eleven custom-title-size-h4">
+    عنوان فارسی - استایل 11
+    <span>
+        <i class="bi bi-chevron-double-down"></i>
+    </span>
+</h4>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="../../assets/library/Jquery-3.7.1/jquery-3.7.1.min.js"></script>
+    <script src="../../assets/library/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/MyJs.js"></script>
+</body>
+</html>

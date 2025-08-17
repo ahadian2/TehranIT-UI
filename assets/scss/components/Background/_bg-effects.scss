@@ -1,0 +1,133 @@
+﻿/* پکیج افکت‌های پس‌زمینه سازگار با همه مرورگرهای مدرن
+   نکته‌ها:
+   - از CSS Variable برای سفارشی‌سازی سریع استفاده شده (با fallback)
+   - برای کاربرانی که reduced motion دارند، انیمیشن‌ها کند/متوقف می‌شود
+   - فقط CSS خالص؛ بدون JS و بدون تصویر خارجی
+*/
+
+/* ---------- متغیرهای قابل شخصی‌سازی در سطح مصرف‌کننده ---------- */
+/* می‌توانید در هر المان/سکشن override کنید: */
+:root {
+    --bg1: #ee7752;
+    --bg2: #e73c7e;
+    --bg3: #23a6d5;
+    --bg4: #23d5ab;
+    --bg-angle: -45deg; /* زاویه گرادیان متحرک */
+    --bg-speed: 15s; /* سرعت انیمیشن گرادیان */
+    --bg-size: 400% 400%; /* ابعاد پس‌زمینه متحرک */
+
+    --stripe-color: rgba(255,255,255,0.06);
+    --stripe-size: 14px;
+    --dot-color: rgba(255,255,255,0.08);
+    --dot-size: 3px; /* قطر نقطه */
+    --dot-gap: 14px; /* فاصله پترن */
+
+    --grid-color: rgba(255,255,255,0.06);
+    --grid-gap: 24px;
+    --noise-opacity: 0.05; /* شدت نویز شبه‌تصویری */
+}
+
+/* ---------- 1) گرادیان ثابت ---------- */
+.bg-gradient {
+    background: linear-gradient(135deg, var(--bg1, #ee7752), var(--bg2, #e73c7e), var(--bg3, #23a6d5), var(--bg4, #23d5ab) );
+}
+
+/* ---------- 2) گرادیان متحرک (محبوب و سبک) ---------- */
+.bg-gradient-anim {
+    background: linear-gradient(var(--bg-angle, -45deg), var(--bg1, #ee7752), var(--bg2, #e73c7e), var(--bg3, #23a6d5), var(--bg4, #23d5ab) );
+    background-size: var(--bg-size, 400% 400%);
+    animation: bgGradientAnim var(--bg-speed, 15s) ease infinite;
+}
+
+@keyframes bgGradientAnim {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* احترام به ترجیح کاربر برای کاهش حرکت */
+@media (prefers-reduced-motion: reduce) {
+    .bg-gradient-anim {
+        animation-duration: calc(var(--bg-speed, 15s) * 2); /* کندتر */
+    }
+}
+
+/* ---------- 3) استرایپ‌های مورب (repeating-linear-gradient) ---------- */
+.bg-stripes {
+    background-color: transparent;
+    background-image: repeating-linear-gradient( 45deg, var(--stripe-color, rgba(255,255,255,0.06)) 0 10px, transparent 10px 20px );
+}
+
+/* ---------- 4) نقاط (پولکا دات) با radial-gradient ---------- */
+.bg-dots {
+    /* پترن نقطه‌ای کلاسیک */
+    background-image: radial-gradient(circle var(--dot-size, 3px), var(--dot-color, rgba(255,255,255,0.08)) 99%, transparent 100%);
+    background-size: var(--dot-gap, 14px) var(--dot-gap, 14px);
+}
+
+/* ---------- 5) گرید ظریف (شبکه) با دو گرادیان خطی ---------- */
+.bg-grid {
+    background-image: linear-gradient(var(--grid-color, rgba(255,255,255,0.06)) 1px, transparent 1px), linear-gradient(90deg, var(--grid-color, rgba(255,255,255,0.06)) 1px, transparent 1px);
+    background-size: var(--grid-gap, 24px) var(--grid-gap, 24px);
+}
+
+/* ---------- 6) نویز سبک بدون تصویر خارجی ----------
+   ترفند: چندین گرادیان شفاف با زوایای مختلف روی هم برای حس بافت */
+.bg-noise {
+    background-image: repeating-linear-gradient(0deg, rgba(0,0,0,var(--noise-opacity, .05)) 0 1px, transparent 1px 2px), repeating-linear-gradient(90deg, rgba(0,0,0,var(--noise-opacity, .05)) 0 1px, transparent 1px 3px), repeating-linear-gradient(45deg, rgba(0,0,0,var(--noise-opacity, .05)) 0 1px, transparent 1px 2px);
+}
+
+/* ---------- ترکیب‌پذیری: می‌تونی چند کلاس را با هم بزنی ---------- */
+/* مثال: .bg-gradient-anim.bg-noise  */
+
+
+/* ---------- نسخه‌های پیش‌تنظیم (Preset) به شکل کلاس‌های آماده ---------- */
+$bg-presets: ( "sunset": (#ee7752, #e73c7e, #23a6d5, #23d5ab), "ocean": (#0061ff, #60efff, #6af5ff, #bfe9ff), "forest": (#134e5e, #71b280, #3a7d44, #86c77a) );
+
+@each $name, $colors in $bg-presets {
+    .bg-gradient--#{$name} {
+        $c1: nth($colors, 1);
+        $c2: nth($colors, 2);
+        $c3: nth($colors, 3);
+        $c4: nth($colors, 4);
+        background: linear-gradient(135deg, #{$c1}, #{$c2}, #{$c3}, #{$c4});
+    }
+
+    .bg-gradient-anim--#{$name} {
+        $c1: nth($colors, 1);
+        $c2: nth($colors, 2);
+        $c3: nth($colors, 3);
+        $c4: nth($colors, 4);
+        background: linear-gradient(var(--bg-angle, -45deg), #{$c1}, #{$c2}, #{$c3}, #{$c4});
+        background-size: var(--bg-size, 400% 400%);
+        animation: bgGradientAnim var(--bg-speed, 15s) ease infinite;
+    }
+}
+
+/* ---------- ابزار کمکی اندازه پوشش ---------- */
+.bg-cover {
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-contain {
+    background-size: contain;
+    background-position: center;
+}
+
+.bg-fixed {
+    background-attachment: fixed;
+}
+
+/* نوک طلایی:
+   اگر روی سکشن‌ها استفاده می‌کنی، بهتره padding داشته باشی
+   و یک رنگ متن مناسب تم‌ات ست کنی یا از utilityهای بوت‌استرپ استفاده کنی.
+*/
