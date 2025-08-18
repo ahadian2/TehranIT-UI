@@ -1,7 +1,7 @@
 ﻿
 @use "../../node_modules/bootstrap/scss/functions";
-//fonts 
-@use "custom/_fonts";
+//font face
+@use "custom/_font-face";
 // متغیرهای سفارشی
 @use "custom/_variables" as theme;
 
@@ -42,9 +42,6 @@ $theme-colors-extended: (
   $light:                                   theme.$light,
   $dark:                                    theme.$dark,
   $theme-colors:                            $theme-colors-extended,
-  $font-family-sans-serif:                  theme.$font-sans,
-  $font-size-base:                          theme.$font-size-base,
-  $line-height-base:                        theme.$line-height-base,
   $body-bg:                                 theme.$body-bg,
   $body-color:                              theme.$body-color,
   $border-radius:                           theme.$border-radius,
@@ -58,8 +55,11 @@ $theme-colors-extended: (
 // تم‌ها و دارک مد
 @use "custom/_themes";
 @use "custom/_theme-anim";
-// تایپوگرافی ثابت 
-@use "custom/_typography";
+
+// افزودن فونت و تایپوگرافی
+//یکی از آنها را فعال کنید بفیه رو با کامنت کردن غیر فعال کنید
+//@use "custom/typography/_yekanbakh";
+@use "custom/typography/_iransans";
 
 // میکسین‌ها و استایل‌های سفارشی
 /*@use "custom/mixins" as *;*/

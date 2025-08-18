@@ -11,5 +11,19 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahadian2/TehranIT-UI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahadian2/TehranIT-UI/issues"
+  },
+  "homepage": "https://github.com/ahadian2/TehranIT-UI#readme",
+  "devDependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.7",
+    "rtlcss": "^4.3.0",
+    "sass": "^1.90.0"
+  }
 }
