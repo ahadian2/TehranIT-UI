@@ -1,0 +1,73 @@
+﻿@use "../../custom/_variables" as *;
+.coming-soon-a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .coming-soon-a-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+
+        .coming-soon-a-logo {
+            img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        .coming-soon-a-social {
+            a {
+                display: inline-block;
+                color: #efefef;
+                transition: transform .5s;
+                width: 35px;
+                height: 35px;
+                text-align: center;
+                margin-left: 8px;
+                line-height: 2.55rem;
+                border-radius: 100%;
+                /*! rtl:ignore */
+                padding-right: 0.1rem;
+                font-size: 22px;
+
+
+                &:hover {
+                    font-size:18px;
+                    background-color: rgba($primary, 0.4);
+                    transform: translateY(-3px);
+                }
+            }
+        }
+    }
+
+    .coming-soon-a-title {
+        text-align: center;
+
+        h1 {
+            color: #efefef;
+        }
+
+        span {
+            color: #efefef;
+
+            &:before {
+                border-color: #efefef;
+            }
+
+            &:after {
+                border-color: #efefef;
+            }
+        }
+    }
+
+    .coming-soon-a-developer {
+        padding: 15px;
+        font-weight: 300;
+        font-size: 12px;
+        text-align: center;
+        color: #efefef;
+    }
+}

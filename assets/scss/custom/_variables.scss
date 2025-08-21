@@ -1,9 +1,10 @@
 ﻿//-------------------
 //متغییر های سفارشی
 //-------------------
-$color-a: #0E71EB;
-$color-b: #21C08B;
-
+$brandcolor-a: #104587;
+$brandcolor-b: #185cb1;
+$brandcolor-c: #1d6fd5;
+$primary: $brandcolor-a;
 //-------------------
 //بکگراند
 //-------------------
@@ -24,12 +25,17 @@ $txt-faint: #888888;
 $txt-black-fixed: #1a1a1a;
 $txt-white-fixed: #efefef;
 $txt-gray-fixed: #7f7f7f;
-
+//-------------------
+// رنگ بوردر ها
+//-------------------
+$border-brand: $brandcolor-a;
+$border-strong: #0d6efd;
+$border-medium: #6c757d;   
+$border-light: #dee2e6;
 //-------------------
 //رنک های اصلی
 //-------------------
-$primary: #ff5722;
-$secondary: #607d8b;
+$secondary: #6c757d;
 $success: #4caf50;
 $info: #00bcd4;
 $warning: #ffc107;
@@ -38,8 +44,8 @@ $danger: #f44336;
 //-------------------
 //دارک لایت
 //-------------------
-$light: #00bcd4;
-$dark: #f44336;
+$light: #f8f9fa;
+$dark: #212529;
 
 //-------------------
 //گردی و فاصله

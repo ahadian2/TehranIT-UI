@@ -8,10 +8,13 @@
 :root,
 [data-bs-theme="light"] {
     //-------------------
-    //متغییر های سفارشی
+    //متغییر های برند سفارشی
     //-------------------
-    @include set-pair(color-a, #ff0000);
-    @include set-pair(color-b, #ff6a00);
+    @include set-pair(brandcolor-a, #104587);
+    @include set-pair(brandcolor-b, #185cb1);
+    @include set-pair(brandcolor-c, #1d6fd5);
+    //مقدار primary باید برابر با brandcolor-a باشد
+    @include set-pair(primary, #104587);
     //-------------------
     //بکگراند
     //-------------------
@@ -32,14 +35,21 @@
     @include set-pair(txt-white-fixed, #efefef);
     @include set-pair(txt-gray-fixed, #7f7f7f);
     //-------------------
+    // رنگ بوردر ها
+    //-------------------
+    @include set-pair(border-strong, #0d6efd);
+    @include set-pair(border-medium, #6c757d);
+    @include set-pair(border-light, #dee2e6);
+    //مقدار border-brand باید برابر با brandcolor-a باشد
+    @include set-pair(border-brand, #104587);
+    //-------------------
     // رنگ اصلی
     //-------------------
-    @include set-pair(primary, #ed6640);
-    @include set-pair(secondary, #f86c45);
+    /* @include set-pair(secondary, #6c757d);
     @include set-pair(success, #4caf50);
     @include set-pair(info, #00bcd4);
     @include set-pair(warning, #ffc107);
-    @include set-pair(danger, #f44336);
+    @include set-pair(danger, #f44336);*/
     //-------------------
     //تنطیمات دکمه دارک مد
     //-------------------
@@ -51,15 +61,47 @@
     //-------------------
     //@include set-pair(light, #1b252d);
     //@include set-pair(dark, #1E1E1E);
+    //-------------------
+    // دکمه ها
+    //-------------------
+    .btn-primary, .btn-secondary, .btn-success, .btn-danger, .btn-warning, .btn-info, .btn-light, .btn-dark {
+        color: #fff !important;
+        transition: transform 0.3s;
+        font-size: 0.8rem;
+        border-radius: 2px;
+
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+
+    .btn-outline-primary, .btn-outline-secondary, .btn-outline-success, .btn-outline-danger, .btn-outline-warning, .btn-outline-info, .btn-outline-light, .btn-outline-dark {
+        transition: transform 0.3s;
+        font-size: 0.8rem;
+        border-radius: 2px;
+
+        &:hover {
+            color: #fff;
+            transform: translateY(-3px);
+        }
+    }
+
+    .btn-lg {
+        padding: 10px 35px;
+        font-size: 1rem;
+    }
 }
 
 //تم دارک
 [data-bs-theme="dark"] {
     //-------------------
-    //متغییر های سفارشی
+    //متغییر های برند سفارشی
     //-------------------
-    @include set-pair(color-a, #7A9EA3);
-    @include set-pair(color-b, #B87C7C);
+    @include set-pair(brandcolor-a, #104587);
+    @include set-pair(brandcolor-b, #185cb1);
+    @include set-pair(brandcolor-c, #1d6fd5);
+    //مقدار primary باید برابر با brandcolor-a باشد
+    @include set-pair(primary, #104587);
     //-------------------
     //بکگراند
     //-------------------
@@ -80,16 +122,23 @@
     @include set-pair(txt-white-fixed, #efefef);
     @include set-pair(txt-gray-fixed, #7f7f7f);
     //-------------------
+    // رنگ بوردر ها
+    //-------------------
+    @include set-pair(border-strong, #66b2ff);
+    @include set-pair(border-medium, #adb5bd);
+    @include set-pair(border-light, #495057);
+    //مقدار border-brand باید برابر با brandcolor-a باشد
+    @include set-pair(border-brand, #104587);
+    //-------------------
     // رنگ اصلی
     //-------------------
-    @include set-pair(primary, #ed6640);
-    @include set-pair(secondary, #f86c45);
+    /*  @include set-pair(secondary, #f86c45);
     @include set-pair(success, #4caf50);
     @include set-pair(info, #00bcd4);
     @include set-pair(warning, #ffc107);
     @include set-pair(danger, #f44336);
     @include set-pair(light, #F4BFBF);
-    @include set-pair(dark, #7C93A6);
+    @include set-pair(dark, #7C93A6);*/
     //-------------------
     //تنطیمات دکمه دارک مد
     //-------------------

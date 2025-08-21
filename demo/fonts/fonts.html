@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html lang="fa" dir="rtl" class="theme-fade" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TehranIT – Demo</title>
+    <!--Dark Mode-->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            if (!saved) saved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-bs-theme', saved);
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/css/bootstrap-custom.rtl.min.css">
+    <link href="../../assets/fonts/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="../../assets/css/MyCss.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- learn -->
+    <section class="sec sec-bg-light sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="custom-title custom-title--eleven custom-title-size-h3">
+                        آموزش کار با فونت ها
+                        <span>
+                            <i class="bi bi-chevron-double-down"></i>
+                        </span>
+                    </h2>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4">فعال کردن ویا انتخاب فونت</h3>
+                    <p>
+                        <span>این قالب از دو فونت در حال حاضر پشتیبانی می‌کند. که شامل فونت ‌های ایران سنس و ایران یکان بخ می‌باشد. فونت فیس‌های آنها به پروژه اضافه شده. خود فونت‌ها هم در پوشه </span>
+                        <code>assets</code>
+                        <span>و پوشه </span>
+                        <code>fonts</code>
+                        <span>وجود دارد.</span>
+                    </p>
+                    <p>
+                        <span>برای فعال کردن هر کدام از فونت‌ها می‌توانید به فایل </span>
+                        <code>app.scss</code>
+                        <span>مراجعه کنید. در بخش فونت‌ها یکی از فونت‌ها را فعال نمایید. توجه داشته باشید ه پروژه به صورتی طراحی شده که فقط شما می‌توانید یک فونت را فعال نمایید. و در صورتی که بیش از یک فونت را فعال کنید پروژه شما به خوبی تکست ها را نمایش نمی‌دهد.</span>
+                    </p>
+                    <p>
+                        <span>همانطور که مشاهده می‌کنید یکی از فونت‌ها فعال است و یکی از آنها کامنت شده یعنی غیر فعال است.</span>
+                    </p>
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">//@use "custom/typography/_yekanbakh";
+  @use "custom/typography/_iransans";</script>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">تایپوگرافی</h3>
+                    <p>همانطور که می‌دانید زمانی که از فونت‌ها استفاده می‌کنیم باید تایپوگرافی اون را نیز اضافه کنیم. تا بتوانیم تنظیم کنیم فونت‌های ما در تگ‌های مختلف به چه صورت نمایش داده بشود. در حال حاضر چون این پروژه از دو فونت پشتیبانی می‌کند ما نیز دو فایل تایپوگرافی یکی برای فونت ایران سنس و یکی هم برای یکان داریم.</p>
+                    <p>و این دو فایل دقیقاً همان فایل‌هایی هستند که شما در مرحله قبل آنها را فعال و غیر فعال می‌کردین. در واقع با فعال کردن تایپوگرافی هر فونت می‌توانید آن را به پروژه خود اضافه کنید محل قرارگیری آن را متوانید از قسمت زیر مشاهده کنید. و بر اساس نیاز خود آن را شخصی سازی کنید.</p>
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">// assets/scss/custom/typography/_iransans.scss
+// assets/scss/custom/typography/_yekanbakh.scss</script>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">افزودن فونت جدید</h3>
+                    <p>فرض کنید قصد داریم یک فونت جدید با نام شبنم به پروژه خودمان اضافه کنیم :</p>
+                    <ul>
+                        <li>
+                            <span>مرحله یک : فایل فونت را در پوشه </span>
+                            <code>assets</code>
+                            <span>و فولدر </span>
+                            <code>fonts</code>
+                            <span>یک پوشه‌ای با نام </span>
+                            <code>shabnam</code>
+                            <span>میسازیم و آن را کپی میکنیم.</span>
+                        </li>
+                        <li>
+                            <span>مرحله دوم : باید فونت فیس‌های خودمان را اضافه کنیم. ما فایلی را ایجاد کرده‌ایم که داخل آن فونت فیس‌ها قرار دارد. و باید به این فایل فونت فیس‌های جدید خودمان را نیز اضافه کنیم. مسیر این فایل : </span>
+                            <code>assets/scss/custom/_font-face.scss</code>
+                        </li>
+                        <li>
+                            <span>مرحله سوم : در این مرحله باید تایپوگرافی فونت جدید خودمان را ایجاد کنیم . برای این کار باید به مسیر </span>
+                            <code>assets/scss/custom/typography</code>
+                            <span>برویم و یک فایل جدید ایجاد کرده و تایپوگرافی خودمان را آنجا اضافه کنیم.</span>
+                        </li>
+                        <li>
+                            <span>باید به فایل </span>
+                            <code>app.scss</code>
+                            <span>رفته و فایلی که در مرحله قبل ایحاد کردیم را ایمپورت کنیم. دقیقا زیر دو فونت دیگر.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="../../assets/library/Jquery-3.7.1/jquery-3.7.1.min.js"></script>
+    <script src="../../assets/library/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<!doctype html>
+<html lang="fa" dir="rtl" class="theme-fade" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TehranIT – Demo</title>
+    <!--Dark Mode-->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            if (!saved) saved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-bs-theme', saved);
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/css/bootstrap-custom.rtl.min.css">
+    <link href="../../assets/fonts/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="../../assets/css/MyCss.css" rel="stylesheet" />
+</head>
+<body>
+
+    <section class="sec sec-min-100vh sec-bg-img sec-scrim-20 coming-soon-a" style="background-image:url(../../assets/img/header/1.webp)">
+        <div class="coming-soon-a-header">
+            <a href="#" class="coming-soon-a-logo">
+                <img src="../../assets/img/logo/logo-a.webp"/>
+            </a>
+            <div class="coming-soon-a-social">
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+                <a href="#"><i class="bi bi-telegram"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+        <div class="coming-soon-a-title">
+            <h1 class="custom-title custom-title--nine custom-title-size-h1">
+                نام برند شرکت را وارد کنید
+                <span>به زودی منتشر خواهد شد</span>
+            </h1>
+        </div>
+        <div class="coming-soon-a-developer">
+            <span>Mohammadreza Ahadian</span>
+        </div>
+    </section>
+
+    <script src="../../assets/library/Jquery-3.7.1/jquery-3.7.1.min.js"></script>
+    <script src="../../assets/library/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+</body>
+</html>

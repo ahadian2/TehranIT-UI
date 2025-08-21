@@ -18,10 +18,15 @@ $theme-colors-extended: (
   "dark":      theme.$dark,
 
   //رنگ‌های سفارشی
-  "color-a":            theme.$color-a,
-  "color-b":            theme.$color-b,
-  "sec-color-light":    theme.$sec-bg-light,
-  "sec-color-dark":     theme.$sec-bg-dark,
+  "brandcolor-a":      theme.$brandcolor-a,
+  "brandcolor-b":      theme.$brandcolor-b,
+  "brandcolor-c":      theme.$brandcolor-c,
+  "border-brand":      theme.$border-brand,
+  "border-strong":     theme.$border-strong,
+  "border-medium":     theme.$border-medium,
+  "border-light":      theme.$border-light,
+  "sec-color-light":   theme.$sec-bg-light,
+  "sec-color-dark":    theme.$sec-bg-dark,
   "txt-base":          theme.$txt-base,
   "txt-muted":         theme.$txt-muted,
   "txt-faint":         theme.$txt-faint,
@@ -66,9 +71,11 @@ $theme-colors-extended: (
 
 //کامپوننت ها
 @use "components/Section/sec";
-@use "components/Background/_bg-effects";
+@use "components/Background/_gradient";
 @use "components/TextColor/_text-color";
 @use "components/Icon/_dark-mode-icon";
 @use "components/CodeViewer/_code-viewer";
 @use "components/Title/_title";
+@use "components/ComingSoon/_coming-soon-a";
+@use "components/ColorPalette/_color-palette";
 
