@@ -23,7 +23,7 @@
             left: 0;
             height: 100%;
             width: 100%;
-            background-color: rgba(mix($primary, #000000, 50%), 0.8);
+            background-color: rgba(mix($primary, #000000, 50%), 0.9);
             transform: skewX(-9deg);
             transform-origin: top right;
             z-index: -1;
@@ -45,10 +45,10 @@
 
         .coming-soon-b-logo {
             img {
-                width: 90px;
-                height: 90px;
+                width: 75px;
+                height: 75px;
                 opacity: 0.3;
-                transition: opacity 0.3s;
+                transition: opacity 0.8s;
 
                 &:hover {
                     opacity: 1;
@@ -83,7 +83,7 @@
                 height: 4rem;
                 border-radius: 100%;
                 color: var(--bs-txt-white-fixed);
-                background-color: rgba(mix($primary, #000000, 50%), 0.8);
+                background-color: rgba(mix($primary, #000000, 50%), 0.85);
                 transition: transform 0.3s;
 
                 &:hover {
