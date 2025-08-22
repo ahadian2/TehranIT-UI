@@ -9,7 +9,7 @@
         position: relative;
         color: var(--bs-txt-white-fixed);
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         flex-direction: column;
         gap: 20px;
@@ -45,9 +45,14 @@
 
         .coming-soon-b-logo {
             img {
-                width: 70px;
-                height: 70px;
+                width: 90px;
+                height: 90px;
+                opacity: 0.8;
             }
+        }
+
+        .coming-soon-item-developer {
+            font-size: 14px;
         }
 
         .coming-soon-item-des {
