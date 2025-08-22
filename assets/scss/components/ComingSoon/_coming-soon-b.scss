@@ -43,22 +43,6 @@
             }
         }
 
-        .coming-soon-b-logo {
-            img {
-                width: 75px;
-                height: 75px;
-                opacity: 0.8;
-                transition: opacity 0.3s;
-
-                &:hover {
-                    opacity: 1;
-                }
-            }
-        }
-
-        .coming-soon-item-developer {
-            font-size: 14px;
-        }
 
         .coming-soon-item-des {
             max-width: 450px;
