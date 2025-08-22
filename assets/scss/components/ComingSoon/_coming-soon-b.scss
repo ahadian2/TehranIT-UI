@@ -47,7 +47,12 @@
             img {
                 width: 90px;
                 height: 90px;
-                opacity: 0.8;
+                opacity: 0.3;
+                transition: opacity 0.3s;
+
+                &:hover {
+                    opacity: 1;
+                }
             }
         }
 
