@@ -1,0 +1,89 @@
+﻿<!doctype html>
+<html lang="fa" dir="rtl" class="theme-fade" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TehranIT – Demo</title>
+    <!--Dark Mode-->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            if (!saved) saved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-bs-theme', saved);
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/css/bootstrap-custom.rtl.min.css">
+    <link href="../../assets/fonts/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="../../assets/css/MyCss.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- dark mode -->
+    <section class="sec sec-bg-dark sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <label class="dark-mode-icon dark-mode-icon--lg" aria-label="Toggle dark mode">
+                        <input class="toggle-checkbox dark-mode-icon-toggle" id="darkModeToggle" type="checkbox">
+                        <div class="toggle-slot">
+                            <div class="sun-icon-wrapper">
+                                <i class="bi bi-sun-fill sun-icon"></i>
+                            </div>
+                            <div class="toggle-button"></div>
+                            <div class="moon-icon-wrapper">
+                                <i class="bi bi-moon-fill moon-icon"></i>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--style-2-->
+    <section class="sec sec-bg-light sec-py-5 txt-base color-palette">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--one custom-title-size-h3">
+                        رنگ های سکشن
+                    </h3>
+                </div>
+
+                <div class="col-12">
+                    <button type="button" class="btn btn-primary">بیشتر بدانید</button>
+                    <button type="button" class="btn btn-secondary">بیشتر بدانید</button>
+                    <button type="button" class="btn btn-success">بیشتر بدانید</button>
+                    <button type="button" class="btn btn-danger">بیشتر بدانید</button>
+                    <button type="button" class="btn btn-warning">بیشتر بدانید</button>
+                    <button type="button" class="btn btn-info">بیشتر بدانید</button>
+                    <button type="button" class="btn btn-light">بیشتر بدانید</button>
+                    <button type="button" class="btn btn-dark">بیشتر بدانید</button>
+                    <button type="button" class="btn btn-link">بیشتر بدانید</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="../../assets/library/Jquery-3.7.1/jquery-3.7.1.min.js"></script>
+    <script src="../../assets/library/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".copy-class").on("click", function () {
+                let text = $(this).text().trim(); // متن داخل همون div
+                navigator.clipboard.writeText(text).then(function () {
+                    alert("کپی شد: " + text);
+                }).catch(function (err) {
+                    console.error("خطا در کپی: ", err);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
