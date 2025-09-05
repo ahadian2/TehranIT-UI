@@ -51,6 +51,7 @@ $Myradius:0.2rem;
         box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
     }
 }
+
 /*hover-b*/
 .hover-b {
     transition: border-radius 0.3s !important;
@@ -60,6 +61,7 @@ $Myradius:0.2rem;
         box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
     }
 }
+
 /*hover-c*/
 .hover-c {
     transition: transform 0.3s !important;
@@ -69,6 +71,7 @@ $Myradius:0.2rem;
         box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
     }
 }
+
 /*hover-d*/
 .hover-d {
     position: relative;
@@ -114,6 +117,72 @@ $Myradius:0.2rem;
         width: 0%;
         background: $brandcolor-a;
         transition: width 0.3s;
+    }
+
+    &:hover:after {
+        width: 100%;
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:hover {
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    }
+}
+
+/*hover-f*/
+.hover-f {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px !important;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        background: $brandcolor-c;
+        transition: width 0.6s;
+        border-radius: 30px !important;
+    }
+
+    &:hover:after {
+        width: 100%;
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:hover {
+        background-color: transparent !important;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    }
+}
+
+/*hover-g*/
+.hover-g {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px !important;
+    border:none !important;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        background: $brandcolor-c;
+        transition: width 0.6s;
+        border-radius: 30px !important;
     }
 
     &:hover:after {

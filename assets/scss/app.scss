@@ -27,12 +27,14 @@ $theme-colors-extended: (
   "border-light":      theme.$border-light,
   "sec-color-light":   theme.$sec-bg-light,
   "sec-color-dark":    theme.$sec-bg-dark,
+  "sec-color-darker":  theme.$sec-bg-darker,
   "txt-base":          theme.$txt-base,
   "txt-muted":         theme.$txt-muted,
   "txt-faint":         theme.$txt-faint,
   "txt-black-fixed":   theme.$txt-black-fixed,
   "txt-white-fixed":   theme.$txt-white-fixed,
-  "txt-gray-fixed":    theme.$txt-gray-fixed
+  "txt-gray-fixed":    theme.$txt-gray-fixed,
+  "overlay":           theme.$overlay
 );
 
 
@@ -80,4 +82,7 @@ $theme-colors-extended: (
 @use "components/ComingSoon/_coming-soon-b";
 @use "components/ColorPalette/_color-palette";
 @use "components/Buttons/_custom-btn";
+@use "components/NavbarTop/_navbar-top-a";
+@use "components/NavbarSidebar/_navbar-sidebar-a";
+@use "components/Scrollbar/_scrollbar";
 

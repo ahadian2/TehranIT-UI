@@ -14,12 +14,26 @@
 .sec-bg-dark {
     background-color: var(--bs-sec-bg-dark);
 }
+.sec-bg-darker {
+    background-color: var(--bs-sec-bg-darker);
+}
 
 /* ==== ارتفاع آماده برای سکشن‌ها ==== */
 .sec-min-100vh {
     min-height: 100vh;
 }
-
+.sec-min-95vh {
+    min-height: 95vh;
+}
+.sec-min-90vh {
+    min-height: 90vh;
+}
+.sec-min-85vh {
+    min-height: 85vh;
+}
+.sec-min-80vh {
+    min-height: 80vh;
+}
 .sec-min-75vh {
     min-height: 75vh;
 }
@@ -177,5 +191,23 @@ $max-section-space: 20; // یعنی sec-pt-1 تا sec-pt-20 ساخته میشه
     > * {
         position: relative;
         z-index: 2;
+    }
+}
+//animation background image
+
+.anim-bg-a {
+    animation: anim-a 30s ease-in-out infinite;
+}
+@keyframes anim-a {
+    0% {
+        background-position: center;
+    }
+
+    50% {
+        background-position: top;
+    }
+
+    100% {
+        background-position: center;
     }
 }

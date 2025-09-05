@@ -1,0 +1,232 @@
+﻿<!doctype html>
+<html lang="fa" dir="rtl" class="theme-fade" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TehranIT – Demo</title>
+    <!--Dark Mode-->
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            if (!saved) saved = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-bs-theme', saved);
+        })();
+    </script>
+    <link rel="stylesheet" href="../../assets/css/bootstrap-custom.rtl.min.css">
+    <link href="../../assets/fonts/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="../../assets/css/MyCss.css" rel="stylesheet" />
+</head>
+<body>
+    <!--style-1-->
+    <section class="sec sec-bg-dark sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--one custom-title-size-h3">
+                        دمو و تست منو 6
+                    </h3>
+                    <p class="text-center">
+                        از دکمه زیر برای تست و دیدم دموی منو استفاده کنید
+                    </p>
+                    <p class="text-center">
+                        <button class="navbar-sidebar-a__toggle" type="button" aria-label="باز/بستن منوی کناری" style="background-color: var(--bs-brandcolor-a); color: var(--bs-txt-white-fixed); border: none; line-height: 0; padding: 20px; border-radius: 100%;">
+                            <i class="bi bi-list" aria-hidden="true"></i>
+                        </button>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- learn -->
+    <section class="sec sec-bg-light sec-py-5 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="custom-title custom-title--eleven custom-title-size-h3">
+                        آموزش استفاده از کامپوننت NavbarSidebar
+                        <span>
+                            <i class="bi bi-chevron-double-down"></i>
+                        </span>
+                    </h2>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4">فعال کردن کامپوننت </h3>
+                    <p>
+                        <span>برای فعال باید کردن کامپوننت navbar-sidebar-a به فایل </span>
+                        <code>app.scss </code>
+                        <span>در آدرس </span>
+                        <code>assets/scss/app.scss </code>
+                        <span>بروید و در محل مشخص شده یعنی "ایمپورت کامپوتت ها"، آن را ایمپورت کنید.</span>
+                    </p>
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">@use "components/NavbarSidebar/_navbar-sidebar-a";</script>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">نیازمندی های کامپوننت</h3>
+                    <p>
+                        <span>این کامپوننت نیازمند فایل Jquery میباشد که میتوانید از طریق آدرس زیر به فایل JS خود آن را اضافه کنید.</span>
+                    </p>
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">assets/js/navbar-sidebar-a.js";</script>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">دکمه منو</h3>
+                    <p>
+                        <span>میتوانید از کد های زیر برای افزودن دکمه منو استفاده کنید.</span>
+                    </p>
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr"><button class="navbar-sidebar-a__toggle" type="button" aria-label="باز/بستن منوی کناری">
+    <i class="bi bi-list" aria-hidden="true"></i>
+</button></script>
+                    <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">کد های منو سایدبار</h3>
+                    <p>
+                        <span>میتوانید از کد های زیر برای افزودن کد های منو سایدبار استفاده کنید.</span>
+                    </p>
+                    <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">
+<div class="navbar-sidebar-a__overlay" aria-hidden="true"></div>
+<aside class="navbar-sidebar-a navbar-brand1" aria-hidden="true" tabindex="-1">
+    <!--Header-->
+    <div class="navbar-sidebar-a__header">
+        <img src="../../assets/img/logo/logo-c.webp" />
+        <i class="bi bi-list navbar-sidebar-a__close" aria-label="بستن"></i>
+    </div>
+    <!--Menu-->
+    <ul class="navbar-sidebar-a__menu scrollbar-sm">
+
+        <!--search form-->
+        <li class="li-search">
+            <form class="li-search-form" role="search" method="get" action="">
+                <input type="search" class="li-search-input" name="s" id="s" value="" placeholder="جستجو کنید..." autocomplete="off" required />
+                <button type="submit" class="li-search-btn" id="searchsubmit">
+                    <i class="bi bi-search"></i>
+                </button>
+            </form>
+        </li>
+
+        <li class="navbar-sidebar-a__item"><a class="navbar-sidebar-a__link" href="#">خانه</a></li>
+        <li class="navbar-sidebar-a__item has-submenu">
+            <a href="#" class="navbar-sidebar-a__link submenu-toggle">محصولات</a>
+            <ul class="navbar-sidebar-a__submenu">
+                <li class="has-submenu"><a href="#" class="navbar-sidebar-a__link">محصول ۱</a></li>
+                <li><a class="navbar-sidebar-a__link" href="#">محصول ۲</a></li>
+                <li><a class="navbar-sidebar-a__link" href="#">محصول ۳</a></li>
+            </ul>
+        </li>
+        <li class="navbar-sidebar-a__item has-submenu">
+            <a href="#" class="navbar-sidebar-a__link submenu-toggle">خدمات</a>
+            <ul class="navbar-sidebar-a__submenu">
+                <li><a class="navbar-sidebar-a__link" href="#">نصب</a></li>
+                <li><a class="navbar-sidebar-a__link" href="#">پشتیبانی</a></li>
+            </ul>
+        </li>
+        <li class="navbar-sidebar-a__item"><a class="navbar-sidebar-a__link" href="#">ارتباط با ما</a></li>
+        <li class="navbar-sidebar-a__item"><a class="navbar-sidebar-a__link" href="#">درباره ما</a></li>
+        <li class="navbar-sidebar-a__item"><a class="navbar-sidebar-a__link" href="#">پرسنل فروش</a></li>
+        <li class="navbar-sidebar-a__item"><a class="navbar-sidebar-a__link" href="#">پرسنل فنی</a></li>
+        <li class="navbar-sidebar-a__item"><a class="navbar-sidebar-a__link" href="#">خبرنامه ها</a></li>
+        <!--dark mode-->
+        <li class="li-darkmode">
+            <span>حالت روز و شب</span>
+            <label class="dark-mode-icon dark-mode-icon--sm" aria-label="Toggle dark mode">
+                <input class="toggle-checkbox dark-mode-icon-toggle" type="checkbox">
+                <div class="toggle-slot">
+                    <div class="sun-icon-wrapper">
+                        <i class="bi bi-sun-fill sun-icon"></i>
+                    </div>
+                    <div class="toggle-button"></div>
+                    <div class="moon-icon-wrapper">
+                        <i class="bi bi-moon-fill moon-icon"></i>
+                    </div>
+                </div>
+            </label>
+        </li>
+    </ul>
+    <!--Footer-->
+    <div class="navbar-sidebar-a__footer">
+        <div class="navbar-social">
+            <a href="#"><i class="bi bi-whatsapp"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-envelope-fill"></i></a>
+            <a href="#"><i class="bi bi-telephone-fill"></i></a>
+        </div>
+
+    </div>
+
+</aside>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <div class="navbar-sidebar-a__overlay" aria-hidden="true"></div>
+    <aside class="navbar-sidebar-a navbar-brand1" aria-hidden="true" tabindex="-1">
+        <!--Header-->
+        <div class="navbar-sidebar-a__header">
+            <img src="../../assets/img/logo/logo-c.webp" />
+            <i class="bi bi-list navbar-sidebar-a__close" aria-label="بستن"></i>
+        </div>
+        <!--Menu-->
+        <ul class="navbar-sidebar-a__menu scrollbar-sm">
+
+            <!--search form-->
+            <li class="li-search">
+                <form class="li-search-form" role="search" method="get" action="">
+                    <input type="search" class="li-search-input" name="s" id="s" value="" placeholder="جستجو کنید..." autocomplete="off" required />
+                    <button type="submit" class="li-search-btn" id="searchsubmit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </li>
+
+            <li class="navbar-sidebar-a__item"><a class="navbar-sidebar-a__link" href="#">خانه</a></li>
+            <li class="navbar-sidebar-a__item has-submenu">
+                <a href="#" class="navbar-sidebar-a__link submenu-toggle">محصولات</a>
+                <ul class="navbar-sidebar-a__submenu">
+                    <li class="has-submenu"><a href="#" class="navbar-sidebar-a__link">محصول ۱</a></li>
+                    <li><a class="navbar-sidebar-a__link" href="#">محصول ۲</a></li>
+                    <li><a class="navbar-sidebar-a__link" href="#">محصول ۳</a></li>
+                </ul>
+            </li>
+            <li class="navbar-sidebar-a__item has-submenu">
+                <a href="#" class="navbar-sidebar-a__link submenu-toggle">خدمات</a>
+                <ul class="navbar-sidebar-a__submenu">
+                    <li><a class="navbar-sidebar-a__link" href="#">نصب</a></li>
+                    <li><a class="navbar-sidebar-a__link" href="#">پشتیبانی</a></li>
+                </ul>
+            </li>
+            <li class="navbar-sidebar-a__item"><a class="navbar-sidebar-a__link" href="#">ارتباط با ما</a></li>
+            <li class="navbar-sidebar-a__item"><a class="navbar-sidebar-a__link" href="#">درباره ما</a></li>
+            <li class="navbar-sidebar-a__item"><a class="navbar-sidebar-a__link" href="#">پرسنل فروش</a></li>
+            <li class="navbar-sidebar-a__item"><a class="navbar-sidebar-a__link" href="#">پرسنل فنی</a></li>
+            <li class="navbar-sidebar-a__item"><a class="navbar-sidebar-a__link" href="#">خبرنامه ها</a></li>
+            <!--dark mode-->
+            <li class="li-darkmode">
+                <span>حالت روز و شب</span>
+                <label class="dark-mode-icon dark-mode-icon--sm" aria-label="Toggle dark mode">
+                    <input class="toggle-checkbox dark-mode-icon-toggle" type="checkbox">
+                    <div class="toggle-slot">
+                        <div class="sun-icon-wrapper">
+                            <i class="bi bi-sun-fill sun-icon"></i>
+                        </div>
+                        <div class="toggle-button"></div>
+                        <div class="moon-icon-wrapper">
+                            <i class="bi bi-moon-fill moon-icon"></i>
+                        </div>
+                    </div>
+                </label>
+            </li>
+        </ul>
+        <!--Footer-->
+        <div class="navbar-sidebar-a__footer">
+            <div class="navbar-social">
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                <a href="#"><i class="bi bi-telephone-fill"></i></a>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <script src="../../assets/library/Jquery-3.7.1/jquery-3.7.1.min.js"></script>
+    <script src="../../assets/library/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/js/custom.js"></script>
+</body>
+</html>

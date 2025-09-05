@@ -39,21 +39,26 @@
                     <script type="text/plain" class="cb" data-lang="CSS" dir="ltr">@use "components/Section/sec";</script>
                     <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">تغییر بکگراند سکشن های ساده</h3>
                     <p>
-                        <span>سکشن های ساده ما در دو رنگ light و dark هستند. که میتوانید بر اساس نیاز آن ها را استفاده کنید. </span>
+                        <span>سکشن های ساده ما در سه رنگ light و dark و darker هستند. که میتوانید بر اساس نیاز آن ها را استفاده کنید. </span>
                         <span>و شامل کلاس های </span>
-                        <code>sec-bg-light , sec-bg-dark </code>
+                        <code>sec-bg-light , sec-bg-dark , sec-bg-darker</code>
                         <span>میباشد. وبرای تعییر رنگ های سکشن ها به فایل های </span>
                         <code>variables.scss , themes.scss </code>
                         <span>مراجعه کنید. نمونه کد های سکشن ساده.</span>
                     </p>
-                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr"><!--sec sec-bg-light-->
-<section class="sec sec-bg-light">
-    code
-</section>
-<!--sec sec-bg-dark-->
-<section class="sec sec-bg-dark">
-    code
-</section></script>
+                    <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
+                        <!--sec sec-bg-light-->
+                        <section class="sec sec-bg-light">
+                            code
+                        </section>
+                        <!--sec sec-bg-dark-->
+                        <section class="sec sec-bg-dark">
+                            code
+                        </section>
+                        <!--sec sec-bg-darker-->
+                        <section class="sec sec-bg-darker">
+                            code
+                        </section></script>
                     <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">پدینگ بالا و پایین به سکشن ها</h3>
                     <ul>
                         <li>
@@ -70,13 +75,13 @@
                         </li>
                     </ul>
                     <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
-<section class="sec sec-bg-light sec-pb-5 sec-pt-5">
-    code
-</section>
+                        <section class="sec sec-bg-light sec-pb-5 sec-pt-5">
+                            code
+                        </section>
 
-<section class="sec sec-bg-light sec-py-5">
-    code
-</section></script>
+                        <section class="sec sec-bg-light sec-py-5">
+                            code
+                        </section></script>
                     <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">ارتفاع ثابت برای سکشن‌ها</h3>
                     <p>
                         <span>این کامپوننت دارای 3 ارتفاع ثابت میباشد. میتوانید از کلاس های </span>
@@ -85,20 +90,20 @@
                         <code>sec-bg-img </code>
                         <span>همزمان استفاده کنید. و سکشن شما میتواند دارای بکگراند باشد.</span>
                         <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
-<!--100vh-->
-<section class="sec sec-bg-light sec-min-100vh">
-    code
-</section>
+                            <!--100vh-->
+                            <section class="sec sec-bg-light sec-min-100vh">
+                                code
+                            </section>
 
-<!--75vh-->
-<section class="sec sec-bg-light sec-min-75vh">
-    code
-</section>
+                            <!--75vh-->
+                            <section class="sec sec-bg-light sec-min-75vh">
+                                code
+                            </section>
 
-<!--50vh-->
-<section class="sec sec-bg-light sec-min-50vh">
-    code
-</section>
+                            <!--50vh-->
+                            <section class="sec sec-bg-light sec-min-50vh">
+                                code
+                            </section>
                         </script>
                     </p>
                     <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">بکگراند - تصاویر برای سکشن ها</h3>
@@ -108,9 +113,9 @@
                         <span>استفاده کنید. . همچنین باید تصویر را با تگ استایل به سکشن خود اضافه کنید.</span>
                     </p>
                     <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
-<section class="sec sec-min-50vh sec-bg-img" style="background-image: url('assets/img/header/s4.jpg')">
-    code
-</section></script>
+                        <section class="sec sec-min-50vh sec-bg-img" style="background-image: url('assets/img/header/s4.jpg')">
+                            code
+                        </section></script>
                     <h3 class="custom-title custom-title--three custom-title-size-h4 mt-5">لایه شفاف تیره روی بکگراند تصاویر</h3>
                     <p>
                         <span>
@@ -120,13 +125,58 @@
                         <span>انجام دهید و دارای 8 درجه شفافیت میباشد.</span>
                     </p>
                     <script type="text/plain" class="cb" data-lang="HTML" dir="ltr">
-<section class="sec sec-min-50vh sec-bg-img sec-scrim-20" style="background-image: url('assets/img/header/s4.jpg')">
-    code
-</section>
+                        <section class="sec sec-min-50vh sec-bg-img sec-scrim-20" style="background-image: url('assets/img/header/s4.jpg')">
+                            code
+                        </section>
 
-<section class="sec sec-min-50vh sec-bg-img sec-scrim-90" style="background-image: url('assets/img/header/s4.jpg')">
-    code
-</section></script>
+                        <section class="sec sec-min-50vh sec-bg-img sec-scrim-90" style="background-image: url('assets/img/header/s4.jpg')">
+                            code
+                        </section></script>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec sec-bg-dark sec-py-8 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--three custom-title-size-h4">کلاس sec-bg-dark</h3>
+                    <p>
+                        <span>شما در حال شماهده کلاس </span>
+                        <code>sec sec-bg-dark</code>
+                        <span>میباشید.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec sec-bg-light sec-py-8 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--three custom-title-size-h4">کلاس sec-bg-light</h3>
+                    <p>
+                        <span>شما در حال شماهده کلاس </span>
+                        <code>sec sec-bg-light</code>
+                        <span>میباشید.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec sec-bg-darker sec-py-8 txt-base">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="custom-title custom-title--three custom-title-size-h4">کلاس sec-bg-darker</h3>
+                    <p>
+                        <span>شما در حال شماهده کلاس </span>
+                        <code>sec sec-bg-darker</code>
+                        <span>میباشید.</span>
+                    </p>
                 </div>
             </div>
         </div>

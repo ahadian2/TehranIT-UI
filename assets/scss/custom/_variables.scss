@@ -2,7 +2,7 @@
 //متغییر های سفارشی
 //-------------------
 $brandcolor-a: #104587;
-$brandcolor-b: #185cb1;
+$brandcolor-b: #071c37;
 $brandcolor-c: #1d6fd5;
 $primary: $brandcolor-a;
 //-------------------
@@ -12,7 +12,7 @@ $body-bg: #fff;
 // بکگراند سکشن ها
 $sec-bg-light:#fff;
 $sec-bg-dark: #f7f7f7;
-
+$sec-bg-darker: #efefef;
 //-------------------
 // رنگ نوشته ها
 //-------------------
@@ -30,8 +30,8 @@ $txt-gray-fixed: #7f7f7f;
 //-------------------
 $border-brand: $brandcolor-a;
 $border-strong: #0d6efd;
-$border-medium: #6c757d;   
-$border-light: #dee2e6;
+$border-medium: #6c757d;
+$border-light: #ededed;
 //-------------------
 //رنک های اصلی
 //-------------------
@@ -40,19 +40,16 @@ $success: #4caf50;
 $info: #00bcd4;
 $warning: #ffc107;
 $danger: #f44336;
-
 //-------------------
 //دارک لایت
 //-------------------
 $light: #f8f9fa;
 $dark: #212529;
-
 //-------------------
 //گردی و فاصله
 //-------------------
 $border-radius: .15rem;
 $spacer: 1rem;
-
 //-------------------
 //Container widths
 //-------------------
@@ -68,3 +65,7 @@ $container-max-widths: (
 $enable-rounded: true;
 $enable-shadows: false;
 $enable-gradients: false;
+//-------------------
+//صفحه شفاف پشت منوی داشبوردی
+//-------------------
+$overlay: rgba(80,80,80,.6);
